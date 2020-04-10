@@ -130,6 +130,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── gatsby-node.js
     ├── gatsby-ssr.js
     ├── gatsby-wrapper.js
+    ├── jest.config.js
+    ├── jest-preprocess.js
+    ├── loadershim.js
+    ├── setup-test-env.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
