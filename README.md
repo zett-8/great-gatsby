@@ -14,6 +14,10 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 - **Gatsby.js** for client side
 
+  - PWA (optional)
+  - Styled-component
+  - Material-UI
+
 - **Hasura** for backend and DB
 
 - **Apollo** for handling graphql and management state
@@ -26,15 +30,13 @@ Kick off your project with this default boilerplate. This starter ships with the
   - **Authentication** for secure access to Hasura DB
   - **Cloud functions** for handling JWT
 
-- **PWA**
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying this repo.
 
-    ```terminal
+    ```shell
     gatsby new <appname> https://github.com/Zett-8/great-gatsby
     ```
 
@@ -53,6 +55,45 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
+## ⚙️ Set up dependencies
+
+1.  **Init Firebase project**
+
+    ```shell
+    npm install -g firebase-tools
+
+    firebase init
+
+    firebase deploy
+    ```
+
+    then follow the instruction
+
+1.  **Build postgres DB and Hasura on Heroku**
+
+    You can easily do this just by clicking the button!  
+    Follow the official document of Hasura  
+    **[https://hasura.io/](https://hasura.io/)**
+
+1.  **Specify endpoint for Apollo**
+
+    src/provider/apolloAuth.js
+
+    ```javascript
+    const client = new ApolloClient({
+      uri: '<ENDPOINT HERE>',
+      headers: userAuthInfo
+        ? {
+            Authorization: `Bearer ${userAuthInfo.token}`,
+          }
+        : {},
+      cache: new InMemoryCache({
+        dataIdFromObject: (o) => o.id,
+      }),
+      fetch,
+    })
+    ```
+
 ## 📝 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
@@ -66,6 +107,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
+    ├── gatsby-wrapper.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
