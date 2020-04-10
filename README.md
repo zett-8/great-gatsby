@@ -9,21 +9,19 @@
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+
 ## Tech stack
 
--  ***Gatsby.js*** for client side
+- **Gatsby.js** for client side
 
--  ***Hasura*** for backend and DB
+- **Hasura** for backend and DB
 
--  ***Apollo*** for handling graphql and management state
+- **Apollo** for handling graphql and management state
 
--  ***Firebase***
-    - ***Hosting*** for deploy gatsby file
-    - ***Authentication*** for secure access to Hasura DB
-    - ***Cloud functions*** for handling JWT 
-
-
-
+- **Firebase**
+  - **Hosting** for deploy gatsby file
+  - **Authentication** for secure access to Hasura DB
+  - **Cloud functions** for handling JWT
 
 ## 🚀 Quick start
 
@@ -49,7 +47,6 @@ Kick off your project with this default boilerplate. This starter ships with the
     The site is now running at `http://localhost:8000`
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
 
 ## 🧐 What's inside?
 
