@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Great Gatsby`,
     description: `add desc`,
-    author: `@gatsbyjs`,
+    author: `Toshiki Kamei`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
