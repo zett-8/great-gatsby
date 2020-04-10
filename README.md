@@ -67,17 +67,32 @@ Kick off your project with this default boilerplate. This starter ships with the
     firebase deploy
     ```
 
-    then follow the instruction
+    then fill Firebase config
 
-1.  **Build postgres DB and Hasura on Heroku**
+    ./src/provider/firebase.js
+
+    ```javascript
+    if (!firebase.apps.length)
+      firebase.initializeApp({
+        apiKey: '',
+        authDomain: '',
+        databaseURL: '',
+        projectId: '',
+        storageBucket: '',
+        messagingSenderId: '',
+        appId: '',
+      })
+    ```
+
+1)  **Build postgres DB and Hasura on Heroku**
 
     You can easily do this just by clicking the button!  
     Follow the official document of Hasura  
     **[https://hasura.io/](https://hasura.io/)**
 
-1.  **Specify endpoint for Apollo**
+1)  **Specify endpoint for Apollo**
 
-    src/provider/apolloAuth.js
+    ./src/provider/apolloAuth.js
 
     ```javascript
     const client = new ApolloClient({
@@ -92,6 +107,21 @@ Kick off your project with this default boilerplate. This starter ships with the
       }),
       fetch,
     })
+    ```
+
+    then enable Apollo Provider!
+
+    ./gatsby-wrapper.js
+
+    ```javascript
+    export default ({ element }) => (
+      <>
+        {/*<ApolloAuthProvider>*/}
+        <CssBaseline />
+        {element}
+        {/*</ApolloAuthProvider>*/}
+      </>
+    )
     ```
 
 ## 📝 What's inside?
