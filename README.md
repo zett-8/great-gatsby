@@ -21,10 +21,11 @@ Kick off your project with this default boilerplate. This starter ships with the
 - **Heroku** for deploying Hasura
 
 - **Firebase**
+
   - **Hosting** for deploying gatsby file
   - **Authentication** for secure access to Hasura DB
   - **Cloud functions** for handling JWT
-  
+
 - **PWA**
 
 ## 🚀 Quick start
