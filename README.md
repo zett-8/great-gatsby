@@ -84,28 +84,19 @@ Kick off your project with this default boilerplate. This starter ships with the
       })
     ```
 
-1)  **Build postgres DB and Hasura on Heroku**
+1.  **Build postgres DB and Hasura on Heroku**
 
     You can easily do this just by clicking the button!  
     Follow the official document of Hasura  
     **[https://hasura.io/](https://hasura.io/)**
 
-1)  **Specify endpoint for Apollo**
+1.  **Specify graphql endpoint for Apollo**
 
     ./src/provider/apolloAuth.js
 
     ```javascript
     const client = new ApolloClient({
       uri: '<ENDPOINT HERE>',
-      headers: userAuthInfo
-        ? {
-            Authorization: `Bearer ${userAuthInfo.token}`,
-          }
-        : {},
-      cache: new InMemoryCache({
-        dataIdFromObject: (o) => o.id,
-      }),
-      fetch,
     })
     ```
 
@@ -116,10 +107,10 @@ Kick off your project with this default boilerplate. This starter ships with the
     ```javascript
     export default ({ element }) => (
       <>
-        {/*<ApolloAuthProvider>*/}
-        <CssBaseline />
-        {element}
-        {/*</ApolloAuthProvider>*/}
+        <ApolloAuthProvider>
+          <CssBaseline />
+          {element}
+        </ApolloAuthProvider>
       </>
     )
     ```
