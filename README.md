@@ -7,25 +7,24 @@
 <h1 align="center">
   Gatsby's custom starter
 </h1>
-<img src="https://github.com/Zett-8/images/blob/master/gg.png" width="100%" />
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 ## 🖥️ Tech stack
 
-- **Gatsby.js** for client side
+- **[Gatsby.js](https://www.gatsbyjs.org/)** for client side
 
-  - PWA (optional)
   - Styled-component
   - Material-UI
+  - PWA (optional)
 
-- **Hasura** for backend and DB
+- **[Hasura](https://hasura.io/)** for backend and DB
 
-- **Apollo** for handling graphql and management state
+- **[Apollo](https://www.apollographql.com/)** for handling graphql and management state
 
-- **Heroku** for deploying Hasura
+- **[Heroku](https://www.heroku.com)** for deploying Hasura
 
-- **Firebase**
+- **[Firebase](https://firebase.google.com)**
 
   - **Hosting** for deploying gatsby file
   - **Authentication** for secure access to Hasura DB
