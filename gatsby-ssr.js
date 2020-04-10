@@ -5,3 +5,5 @@
  */
 
 // You can delete this file if you're not using it
+import GatsbyWrapper from './gatsby-wrapper'
+export const wrapRootElement = GatsbyWrapper
