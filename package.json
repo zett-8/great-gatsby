@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "great-gatsby",
   "private": true,
-  "description": "A quick starter with Gatsby, Apollo and firebase",
+  "description": "A quick starter with Gatsby, Hasura, Apollo and firebase",
   "version": "0.1.0",
   "author": "Toshiki Kamei",
   "dependencies": {
@@ -51,7 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Zett-8/great-gatsby"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
