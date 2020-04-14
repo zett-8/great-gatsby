@@ -11,7 +11,7 @@ exports.processSignUp = functions.auth.user().onCreate((user) => {
     },
   }
 
-  admin
+  return admin
     .auth()
     .setCustomUserClaims(user.uid, customClaims)
     .catch((err) => console.log(err))
