@@ -47,7 +47,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest"
+    "test": "jest",
+    "init-hasura": "open \"https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku\""
   },
   "repository": {
     "type": "git",
