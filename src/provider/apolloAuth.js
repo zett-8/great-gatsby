@@ -9,6 +9,7 @@ export let Context = createContext(null)
 const ApolloAuth = (props) => {
   const firebase = useFirebase()
   const [userAuthInfo, setUserAuthInfo] = useState('')
+  const [authLoaded, setAuthLoaded] = useState(false)
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged(async (user) => {
@@ -25,8 +26,11 @@ const ApolloAuth = (props) => {
           })
         } else {
         }
+
+        setAuthLoaded(true)
       } else {
         setUserAuthInfo('')
+        setAuthLoaded(true)
       }
     })
     // eslint-disable-next-line
@@ -47,7 +51,7 @@ const ApolloAuth = (props) => {
 
   return (
     <ApolloProvider client={client}>
-      <Context.Provider value={userAuthInfo}>{props.children}</Context.Provider>
+      <Context.Provider value={{ authLoaded, userAuthInfo }}>{props.children}</Context.Provider>
     </ApolloProvider>
   )
 }
