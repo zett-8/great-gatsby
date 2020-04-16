@@ -3,6 +3,9 @@ module.exports = {
     title: `Great Gatsby`,
     description: `add desc`,
     author: `Toshiki Kamei`,
+    url: 'https://url.sample.com',
+    ogImage: '',
+    twitterImage: '',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
