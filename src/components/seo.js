@@ -56,11 +56,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:url`,
-          content: site.metadata.url,
+          content: site.siteMetadata.url,
         },
         {
           property: `og:image`,
-          content: site.metadata.ogImage,
+          content: site.siteMetadata.ogImage,
         },
 
         {
