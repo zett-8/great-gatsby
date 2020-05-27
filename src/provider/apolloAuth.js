@@ -25,6 +25,15 @@ const ApolloAuth = (props) => {
             token,
           })
         } else {
+          const userRef = firebase.firestore.collection('user_meta').doc(user.uid)
+          userRef.onSnapshot(async () => {
+            const token = await user.getIdToken(true)
+            setUserAuthInfo({
+              uid: user.uid,
+              email: user.email,
+              token,
+            })
+          })
         }
 
         setAuthLoaded(true)
