@@ -28,7 +28,8 @@ Kick off your project with this default boilerplate. This starter ships with the
 
   - **Hosting** for deploying gatsby file
   - **Authentication** for secure access to Hasura DB
-  - **Cloud functions** for handling JWT
+  - **Cloud Functions** for handling JWT
+  - **Cloud Firestore** for token refresh
 
 ## 🚀 Quick start
 
