@@ -115,6 +115,44 @@ Kick off your project with this default boilerplate. This starter ships with the
     )
     ```
 
+1. **Set up hasura info**  
+    ./functions/index.js
+    
+    ```javascript
+    const client = new ApolloClient({
+      fetch,
+      uri: functions.config().hasura.url,
+      request: (operation) => {
+        operation.setContext({
+          headers: {
+            'x-hasura-admin-secret': functions.config().hasura.admin_secret,
+          },
+        })
+      },
+    })
+    ```
+    
+    make sure user model or modify
+    
+    ```javascript
+    client.mutate({
+      variables: { id: user.uid, email: user.email || '' },
+      mutation: gql`
+        mutation InsertUsers($id: String, $email: String) {
+          insert_users(objects: { id: $id, name: $name }) {
+            returning {
+              id
+              name
+              email
+              created_at
+            }
+          }
+        }
+      `,
+    })
+    ```
+    
+    
 ## 📝 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
