@@ -60,6 +60,9 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 1.  **Init Firebase project**
 
+    **-- Caution! --  
+    DO NOT overwrite functions/index.js**
+
     ```shell
     npm install -g firebase-tools
 
