@@ -1,8 +1,8 @@
-import * as functions from 'firebase-functions'
-import * as admin from 'firebase-admin'
-import ApolloClient from 'apollo-boost'
-import fetch from 'node-fetch'
-import gql from 'graphql-tag'
+const functions = require('firebase-functions')
+const admin = require('firebase-admin')
+const ApolloClient = require('apollo-boost').default
+const fetch = require('node-fetch')
+const gql = require('graphql-tag')
 
 admin.initializeApp(functions.config().firebase)
 
@@ -34,13 +34,10 @@ exports.processSignUp = functions.auth.user().onCreate(async (user) => {
     await client.mutate({
       variables: { id: user.uid, email: user.email || '' },
       mutation: gql`
-        mutation InsertUsers($id: String, $email: String) {
-          insert_users(objects: { id: $id, name: $name }) {
+        mutation InsertUsers($id: String, $email: String, $name: String) {
+          insert_users(objects: { id: $id, email: $email, name: $name }) {
             returning {
               id
-              name
-              email
-              created_at
             }
           }
         }
