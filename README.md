@@ -93,6 +93,22 @@ Kick off your project with this default boilerplate. This starter ships with the
     You can easily do this just by clicking the button!  
     Follow the official document of Hasura  
     **[https://hasura.io/](https://hasura.io/)**
+    
+1.  **Set config on heroku**
+    ```json
+    {
+      "HASURA_GRAPHQL_ADMIN_SECRET": "<randomString>",
+      "HASURA_GRAPHQL_CORS_DOMAIN": "*",
+      "HASURA_GRAPHQL_UNAUTHORIZED_ROLE": "anonymous",
+      "HASURA_GRAPHQL_JWT_SECRET": {
+        "type": "RS256",
+        "jwk_url": "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com", 
+        "audience": "<FIREBASE_PROJECT_ID>", 
+        "issuer": "https://securetoken.google.com/<FIREBASE_PROJECT_ID>"
+        }
+    }
+    ```
+    *[JWT secret generator](https://hasura.io/jwt-config/)
 
 1.  **Specify graphql endpoint for Apollo**
 
