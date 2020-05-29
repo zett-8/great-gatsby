@@ -37,7 +37,10 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "firebase",
+    "heroku",
+    "apollo"
   ],
   "license": "MIT",
   "scripts": {
