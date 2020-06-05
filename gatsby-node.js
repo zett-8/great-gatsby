@@ -23,3 +23,14 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
     })
   }
 }
+
+// ================================================
+// ================================================
+// ============== setting for router
+// exports.onCreatePage = ({ page, actions }) => {
+//   const { createPage } = actions
+//   if (page.path === `/`) {
+//     page.matchPath = `/*`
+//     createPage(page)
+//   }
+// }
