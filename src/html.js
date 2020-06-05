@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const googleFontURL = 'https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap'
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -13,19 +15,21 @@ export default function HTML(props) {
         {/*install some setting for material-ui*/}
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
 
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
-          as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="preload" as="style" crossOrigin="true" href={googleFontURL} />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const link = document.createElement('link');
+              link.href = '${googleFontURL}';
+              link.rel = 'stylesheet';
+              document.head.appendChild(link);
+            `,
+          }}
         />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
-            rel="stylesheet"
-            type="text/css"
-          />
-        </noscript>
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
