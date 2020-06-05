@@ -12,11 +12,20 @@ export default function HTML(props) {
 
         {/*install some setting for material-ui*/}
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel="preload"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
         />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+            rel="stylesheet"
+            type="text/css"
+          />
+        </noscript>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
