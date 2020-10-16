@@ -17,7 +17,7 @@ export default function HTML(props) {
 
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link rel="preload" as="style" crossOrigin="true" href={googleFontURL} />
+        <link rel="preload" as="font" crossOrigin="true" href={googleFontURL} />
 
         <script
           dangerouslySetInnerHTML={{
