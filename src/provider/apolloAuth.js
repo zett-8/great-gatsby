@@ -1,6 +1,5 @@
 import React, { useEffect, useState, createContext } from 'react'
-import ApolloClient, { InMemoryCache } from 'apollo-boost'
-import { ApolloProvider } from '@apollo/react-hooks'
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import fetch from 'isomorphic-fetch'
 import useFirebase from './firebase'
 
